@@ -1,0 +1,47 @@
+version: '3.3'
+
+services:
+  #######################################
+  # PHP application Docker container
+  #######################################
+  app:
+    hostname: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql
+    ports:
+      - "80:80" # Serves frontend
+      - "8080:8080" # Serves backend
+    volumes:
+      - .:/app
+      - ./docker/nginx/conf.d/01-backend.conf:/opt/docker/etc/nginx/conf.d/01-backend.conf
+      - ./docker/php/development.ini:/opt/docker/etc/php/php.ini
+    env_file:
+      - etc/environment.development.env
+    environment:
+      - YII_ENV_DEV=true
+
+  #######################################
+  # MySQL server
+  #######################################
+  mysql:
+    hostname: mysql
+    image: mysql/mysql-server:8.0
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500Mb
+    # Uncomment bellow to expose mysql port
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql:/var/lib/mysql
+    environment:
+      - TZ=Europe/Lisbon
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=baa_system
+volumes:
+  mysql:

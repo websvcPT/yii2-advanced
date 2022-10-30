@@ -1,0 +1,7 @@
+# !!!! Always keep an empty line at the end of file !!!!
+# Commands must have the user specified: 'application'
+# Add ' >> /var/log/crontab.log' at the end of command to log command output
+# Add ' 2>&1' at the end of command to suppress local mail generation
+# Always test the command in terminal as `application` user! ($ su application)
+
+# m h  dom mon dow user command
