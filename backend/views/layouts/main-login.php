@@ -2,7 +2,6 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-use yii\helpers\Html;
 
 \hail812\adminlte3\assets\AdminLteAsset::register($this);
 $this->registerCssFile('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700');
@@ -11,11 +10,11 @@ $this->registerCssFile('https://code.ionicframework.com/ionicons/2.0.1/css/ionic
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html>
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?= Html::encode($this->title) ?></title>
+    <title>Log in</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php $this->registerCsrfMetaTags() ?>
@@ -23,14 +22,17 @@ $this->registerCssFile('https://code.ionicframework.com/ionicons/2.0.1/css/ionic
 </head>
 <body class="hold-transition login-page">
 <?php  $this->beginBody() ?>
-
-<main role="main">
-    <div class="container">
-        <?= $content ?>
+<div class="login-box">
+    <div class="login-logo">
+        <a href="<?=Yii::$app->homeUrl?>"><b>Admin</b>LTE</a>
     </div>
-</main>
+    <!-- /.login-logo -->
+
+    <?= $content ?>
+</div>
+<!-- /.login-box -->
 
 <?php $this->endBody() ?>
 </body>
 </html>
-<?php $this->endPage();
+<?php $this->endPage() ?>

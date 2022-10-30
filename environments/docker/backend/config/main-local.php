@@ -22,6 +22,14 @@ if (YII_ENV_DEV === true) {
     $config['modules']['gii'] = [
         'class' => \yii\gii\Module::class,
         'allowedIPs' => ['*'],
+        'generators' => [
+            'crud' => [ // generator name
+                'class' => 'yii\gii\generators\crud\Generator', // generator class
+                'templates' => [ // setting for our templates
+                    'yii2-adminlte3' => '@vendor/hail812/yii2-adminlte3/src/gii/generators/crud/default' // template name => path to template
+                ]
+            ]
+        ],
         /*
         'generators' => [
             'crud' => [
