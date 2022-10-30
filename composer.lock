@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53ee702a60a79c711a08305265a71fa3",
+    "content-hash": "5e7b434fe903770964340409c2fb3d1b",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -1448,6 +1448,45 @@
                 }
             ],
             "time": "2022-05-30T19:18:58+00:00"
+        },
+        {
+            "name": "websvc/cryptor",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/websvcPT/cryptor.git",
+                "reference": "0e7b9de155597a890aec31a42cdff609edd79902"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/websvcPT/cryptor/zipball/0e7b9de155597a890aec31a42cdff609edd79902",
+                "reference": "0e7b9de155597a890aec31a42cdff609edd79902",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "websvc\\cryptor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "WebSvcPT",
+                    "email": "websvcPT@github.io"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/websvcPT/cryptor/issues",
+                "source": "https://github.com/websvcPT/cryptor/tree/1.0.3"
+            },
+            "time": "2021-02-10T22:11:25+00:00"
         },
         {
             "name": "yiisoft/yii2",

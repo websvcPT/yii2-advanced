@@ -19,9 +19,7 @@ services:
       - ./docker/nginx/conf.d/01-backend.conf:/opt/docker/etc/nginx/conf.d/01-backend.conf
       - ./docker/php/development.ini:/opt/docker/etc/php/php.ini
     env_file:
-      - etc/environment.development.env
-    environment:
-      - YII_ENV_DEV=true
+      - ./docker/etc/environment.development.env
 
   #######################################
   # MySQL server
